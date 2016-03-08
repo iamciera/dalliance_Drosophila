@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+
+<html>
+
+<head>
+
+<style>
+</style>
+
+<title>Drosophilla dm6 :: Dalliance</title> 
+<script language="javascript" src="../build/dalliance-all.js"></script>
+
+<script language="javascript">
+
+var b = new Browser({
+      chr:        '2R',
+      viewStart:  210280,
+      viewEnd:    289721,
+      cookieKey:  'dm6',
+
+      coordSystem: {
+          speciesName: 'Drosophila',
+          taxon: 10090,
+          auth: '',
+          version: 38,
+          ucscName: 'dm6'
+      },
+
+      sources:      [{name: 'Genome',
+                     twoBitURI:  '../data/dm6.html',
+                     desc: 'Drosophila reference genome build dm6',
+                     tier_type: 'sequence',
+                     provides_entrypoints: true}
+                      ,{name: 'Genes',
+                        desc: 'Gene structures from GENCODE M2',
+                        bwgURI: 'http://www.biodalliance.org/datasets/GRCm38/gencodeM2.bb',
+                        stylesheet_uri: 'http://www.biodalliance.org/stylesheets/gencode.xml',
+                        collapseSuperGroups: true,
+                        trixURI: 'http://www.biodalliance.org/datasets/GRCm38/gencodeM2.ix'}],
+        uiPrefix: '../',
+        fullScreen: true                    
+});
+</script>
+</head>
+
+<body>
+<div id='svgHolder'>Failed to load the Biodalliance genome browser.  Have you run "gulp"?</div>
+</body>
+</html>
+

@@ -8,7 +8,7 @@
 </style>
 
 <title>Drosophilla dm6 :: Dalliance</title> 
-<script language="javascript" src="../build/dalliance-all.js"></script>
+<script language="javascript" src="http://www.biodalliance.org/release-0.13/dalliance-compiled.js"></script>
 
 <script language="javascript">
 
@@ -27,17 +27,10 @@ var b = new Browser({
       },
 
       sources:      [{name: 'Genome',
-                     twoBitURI:  '../data/dm6.html',
+                     twoBitURI:  './data/dm6.2bit',
                      desc: 'Drosophila reference genome build dm6',
                      tier_type: 'sequence',
-                     provides_entrypoints: true}
-                      ,{name: 'Genes',
-                        desc: 'Gene structures from GENCODE M2',
-                        bwgURI: 'http://www.biodalliance.org/datasets/GRCm38/gencodeM2.bb',
-                        stylesheet_uri: 'http://www.biodalliance.org/stylesheets/gencode.xml',
-                        collapseSuperGroups: true,
-                        trixURI: 'http://www.biodalliance.org/datasets/GRCm38/gencodeM2.ix'}],
-        uiPrefix: '../',
+                     provides_entrypoints: true}],
         fullScreen: true                    
 });
 </script>
